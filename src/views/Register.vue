@@ -1,6 +1,5 @@
 <template>
     <div>
-        <h1>注册</h1>
        <cube-form
             :model="model"
             :schema="schema"

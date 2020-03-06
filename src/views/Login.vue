@@ -1,6 +1,5 @@
 <template>
     <div>
-        <h1>登陆</h1>
        <cube-form
             :model="model"
             :schema="schema"
@@ -74,8 +73,9 @@ export default {
                 if(result.code=='0'){
                     this.$store.commit('settoken',result.token)
                     window.localStorage.setItem('token',result.token)
+                    this.$router.replace({path:'/index'})
                 }else{
-                     alert(result.message)
+                    alert(result.message)
                 }
             }catch(err){
                 console.log(err)
