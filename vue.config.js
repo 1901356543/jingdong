@@ -47,19 +47,15 @@ module.exports = {
           res.json({
             data: [
               {
-                url: 'https://mapi.m.jd.com/',
                 image: '//m.360buyimg.com/mobilecms/s700x280_jfs/t1/103806/19/14030/153344/5e6074acEd00048e1/555b1b4a66630f65.jpg!cr_1125x445_0_171!q70.jpg.dpg'
               },
               {
-                url: 'https://mapi.m.jd.com/',
                 image: '//m.360buyimg.com/mobilecms/s700x280_jfs/t1/104744/2/13908/95216/5e5f4dd2Eb59a3b50/ca237c37c0f2ce10.jpg!cr_1125x445_0_171!q70.jpg.dpg'
               },
               {
-                url: 'https://mapi.m.jd.com/',
                 image: '//m.360buyimg.com/mobilecms/s700x280_jfs/t1/52022/13/4372/116319/5d202c35E94762c27/329610707ce90c1a.jpg!cr_1125x445_0_171!q70.jpg.dpg'
               },
               {
-                url: 'https://mapi.m.jd.com/',
                 image: '//m.360buyimg.com/mobilecms/s700x280_jfs/t1/88409/37/13768/67424/5e5e0d14E366916d3/2a758416a5aefe97.jpg!cr_1125x445_0_171!q70.jpg.dpg'
               }
             ]
@@ -592,6 +588,45 @@ module.exports = {
               });
           }
         })
+
+        //首页推荐接口
+        app.get('/api/recommend', (req, res) => {
+          res.json({
+            data: [
+              {
+                image: '//img12.360buyimg.com/mobilecms/s372x372_jfs/t1/51082/25/11627/245323/5d88d217E174e92e2/92ebad1a16ddf166.jpg!q70.dpg.webp',
+                label: 'realme 真我X2 6400万超广角四摄 高通骁龙730G 30W VOOC4.0闪充 4000mAh大电池 全网通8GB+128GB 星图蓝 游戏智能手机',
+                price:'￥199'
+              },
+              {
+                image: '//img10.360buyimg.com/mobilecms/s372x372_jfs/t1/40194/26/1028/165624/5cbbdd98Eb9e794fa/95af6fbf37d4dbc6.jpg!q70.dpg.webp',
+                label: '行李箱套拉杆箱旅行箱保护套防尘罩弹力20/24/26/28/29寸加厚耐磨 穿礼服的汤姆M码',
+                price:'￥299'
+              },
+              {
+                image: '//img12.360buyimg.com/mobilecms/s372x372_jfs/t1/5674/7/16692/408122/5be244a0Ec0718b02/625989961e082605.jpg!q70.dpg.webp',
+                label: '俄罗斯进口 KDV巧克力味夹心糖500g（代可可脂）紫皮糖喜糖糖果kpokaht',
+                price:'￥99'
+              },
+              {
+                image: '//img13.360buyimg.com/mobilecms/s372x372_jfs/t1/64709/27/2134/171675/5d0727bdEd714c689/86d273c2dbfd0c3a.jpg!q70.dpg.webp',
+                label: '超薄LED调色吸顶灯 长方形客厅灯具卧室灯简约现代餐厅创意灯 黑色款40*40cm 三色调光',
+                price:'￥499'
+              },
+              {
+                image: '//img13.360buyimg.com/mobilecms/s372x372_jfs/t1/95019/35/13937/178584/5e5e04bcE12af2cbb/4c47a8d0eec5ac0e.jpg!q70.dpg.webp',
+                label: '三只松鼠蔓越莓曲奇 饼干蛋糕网红儿童零食早餐食品点心薄脆饼干100g/袋',
+                price:'￥29'
+              },
+              {
+                image: '//img12.360buyimg.com/mobilecms/s372x372_jfs/t1/21811/25/5979/430888/5c459b2aEeb7e568e/51dab8ad6e587664.jpg!q70.dpg.webp',
+                label: '朗悦女装 2020夏季新款蕾丝拼接短袖T恤女刺绣韩版宽松上衣打底衫 LWTD191445 粉色 M',
+                price:'￥599'
+              }
+            ]
+          })
+        })
+
       }
     }
   },

@@ -15,6 +15,23 @@ setaxios()
 Vue.config.productionTip = false
 Vue.prototype.$http=axios
 
+// 路由守卫
+router.beforeEach((to, from, next) => {
+  store.commit('settoken',localStorage.getItem('token'))
+  if(to.meta.requireAuth){
+    if(store.state.token){
+      next()
+    }else{
+      next({
+        path:'/login',
+        query:{redirect:to.fullpath}
+      })
+    }
+  }else{
+    next()
+  }
+})
+
 new Vue({
   router,
   store,
